@@ -1,0 +1,44 @@
+name: Update same-source rules
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 3 * * *'
+  push:
+    branches: [main]
+    paths:
+      - scripts/update_rules.py
+      - Shadowrocket-chain-auto.conf.template
+      - .github/workflows/update-rules.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: same-source-rules
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Convert and validate upstream rules
+        env:
+          TARGET_REPOSITORY: ${{ github.repository }}
+        run: python scripts/update_rules.py --repository "$TARGET_REPOSITORY" --branch main
+      - name: Publish changed rule files
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'rules-bot@localhost'
+          git add rules Shadowrocket-chain-auto.conf Shadowrocket-snapshot.conf manifest.json
+          if ! git diff --cached --quiet; then
+            git add last-success.txt
+            git commit -m 'Update converted Shadowrocket rules'
+            git push origin HEAD:main
+          fi

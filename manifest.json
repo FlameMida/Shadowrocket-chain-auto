@@ -1,0 +1,92 @@
+{
+  "sources": {
+    "private": {
+      "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/private.list",
+      "count": 132
+    },
+    "geolocation-cn": {
+      "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/geolocation-cn.list",
+      "count": 5440
+    },
+    "epicgames": {
+      "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/epicgames.list",
+      "count": 30
+    },
+    "google": {
+      "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/google.list",
+      "count": 1078
+    },
+    "ai": {
+      "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/category-ai-!cn.list",
+      "count": 213
+    },
+    "github": {
+      "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/github.list",
+      "count": 65
+    },
+    "microsoft": {
+      "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/microsoft.list",
+      "count": 749
+    },
+    "apple": {
+      "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/apple.list",
+      "count": 1791
+    },
+    "telegram": {
+      "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/telegram.list",
+      "count": 21
+    },
+    "spotify": {
+      "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/spotify.list",
+      "count": 28
+    },
+    "ads": {
+      "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/category-ads.list",
+      "count": 1538
+    },
+    "geolocation-!cn": {
+      "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/geolocation-!cn.list",
+      "count": 33845
+    },
+    "gfw": {
+      "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/gfw.list",
+      "count": 4424
+    },
+    "cn": {
+      "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/cn.list",
+      "count": 107383
+    },
+    "private_ip": {
+      "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geoip/private.list",
+      "count": 18
+    },
+    "cn_ip": {
+      "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geoip/cn.list",
+      "count": 10031
+    },
+    "google_ip": {
+      "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geoip/google.list",
+      "count": 930
+    },
+    "microsoft_ip": {
+      "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geoip/microsoft.list",
+      "count": 1101
+    },
+    "apple_ip": {
+      "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geoip/apple.list",
+      "count": 25
+    },
+    "telegram_ip": {
+      "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geoip/telegram.list",
+      "count": 12
+    },
+    "spotify_ip": {
+      "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geoip/spotify.list",
+      "count": 7
+    },
+    "Anthropic": {
+      "url": "https://raw.githubusercontent.com/Sor85/claude-ruleset/main/clash/claude.list",
+      "count": 22
+    }
+  }
+}
