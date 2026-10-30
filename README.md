@@ -36,7 +36,7 @@ https://raw.githubusercontent.com/FlameMida/Shadowrocket-chain-auto/main/Shadowr
 
 ## 现有设置
 
-默认代理跟随首页当前节点；八个服务组按 Clash 的选择方式，在同一组内直接选择普通节点或“链式落地”，各服务独立记录选择，不增加“服务名节点”子组。Microsoft、Apple、Spotify 保留直连选项。分组采用 `use=true` 组合固定选项与正则节点列表，筛选表达式保留链式落地和直连名称。该写法参考 [Repcz 的 Shadowrocket 配置](https://github.com/Repcz/Tool/blob/X/Shadowrocket/Shadowrocket.conf)，尚需 App 实机确认。移除 FCM、自动测速选节点和负载均衡。21 条原版静态域名规则保留，五条 GitHub 域名按用户要求走 GitHub 组。
+默认代理跟随首页当前节点；八个服务组在同一组内直接选择首页节点或“链式落地”，各服务独立记录选择，不增加“服务名节点”子组。Microsoft、Apple、Spotify 保留直连选项。服务组使用 `include-all-proxies=1` 引入全部节点，不指定订阅名称，也不按节点名称过滤。该写法参考 [mrzhxl 的 Shadowrocket 配置](https://github.com/mrzhxl/ScriptRules/blob/main/Shadowrocket/config.conf) 中固定子组与全部节点并列的定义，尚需 App 实机确认。此前的 `use=true` 表示订阅筛选，不能替代引入首页全部节点。移除 FCM、自动测速选节点和负载均衡。21 条原版静态域名规则保留，五条 GitHub 域名按用户要求走 GitHub 组。
 
 修复分组后需要从原地址重新导入配置；后台更新只刷新规则集，不会替换本地分组。请先在首页添加备注严格为 `自建-美国-TCP` 的 SOCKS5 节点，链式落地组才能引用该节点。链式落地初始选中 REJECT，需要手动改为实际落地节点。
 
