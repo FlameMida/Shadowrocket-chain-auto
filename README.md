@@ -36,7 +36,9 @@ https://raw.githubusercontent.com/FlameMida/Shadowrocket-chain-auto/main/Shadowr
 
 ## 现有设置
 
-默认代理跟随首页当前节点；八个服务组独立手动选节点，均可选择链式落地。Microsoft、Apple、Spotify 补回直连选项。移除 FCM、自动测速选节点和负载均衡。21 条原版静态域名规则保留，五条 GitHub 域名按用户要求走 GitHub 组。
+默认代理跟随首页当前节点；八个服务组各有独立的“服务名节点”子组，外层可选择该节点组或链式落地。手动选普通节点时，先在对应的“服务名节点”子组选择实际节点，再让外层使用这个子组；使用链式出口时，外层直接选链式落地。固定选项与正则节点筛选分开定义，避免两种候选来源混用。Microsoft、Apple、Spotify 保留直连选项。移除 FCM、自动测速选节点和负载均衡。21 条原版静态域名规则保留，五条 GitHub 域名按用户要求走 GitHub 组。
+
+修复分组后需要从原地址重新导入配置；后台更新只刷新规则集，不会替换本地分组。请先在首页添加备注严格为 `自建-美国-TCP` 的 SOCKS5 节点，链式落地组才能引用该节点。链式落地初始选中 REJECT，需要手动改为实际落地节点。
 
 原版 private、geolocation-cn、Epic 前置规则及国外域名优先于最终 GEOIP,CN 的顺序已补回。服务优先顺序沿用当前适配版：Anthropic → AI → Google → GitHub → Microsoft → Apple → Telegram → Spotify → AdBlock，以保证细分服务选择优先。
 

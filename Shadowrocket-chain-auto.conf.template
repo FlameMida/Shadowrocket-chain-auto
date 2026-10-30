@@ -26,19 +26,26 @@ close-if-proxy-chain-missing = true
 
 [Proxy Group]
 链式中转 = select, policy-regex-filter=^(?!.*(?:官网|订阅|流量|到期|剩余|自建-|链式|miniTailscale)).+$
-链式落地 = select, REJECT, policy-regex-filter=^自建-美国-TCP$, policy-select-name=REJECT
+链式落地 = select, REJECT, 自建-美国-TCP, policy-select-name=REJECT
 默认代理 = select, PROXY, 链式落地, policy-select-name=PROXY
 直连 = select, DIRECT
-# select=1 初始选择首个动态节点；需先导入节点订阅。
-Anthropic = select, 链式落地, policy-regex-filter=^(?!.*(?:官网|订阅|流量|到期|剩余|miniTailscale)).+$, select=1
-AI = select, 链式落地, policy-regex-filter=^(?!.*(?:官网|订阅|流量|到期|剩余|miniTailscale)).+$, select=1
-Google = select, 链式落地, policy-regex-filter=^(?!.*(?:官网|订阅|流量|到期|剩余|miniTailscale)).+$, select=1
-GitHub = select, 链式落地, policy-regex-filter=^(?!.*(?:官网|订阅|流量|到期|剩余|miniTailscale)).+$, select=1
-# 添加直连后有两个固定选项，select=2 指向首个动态节点。
-Microsoft = select, 直连, 链式落地, policy-regex-filter=^(?!.*(?:官网|订阅|流量|到期|剩余|miniTailscale)).+$, select=2
-Apple = select, 直连, 链式落地, policy-regex-filter=^(?!.*(?:官网|订阅|流量|到期|剩余|miniTailscale)).+$, select=2
-Telegram = select, 链式落地, policy-regex-filter=^(?!.*(?:官网|订阅|流量|到期|剩余|miniTailscale)).+$, select=1
-Spotify = select, 直连, 链式落地, policy-regex-filter=^(?!.*(?:官网|订阅|流量|到期|剩余|miniTailscale)).+$, select=2
+# 外层只列固定选项，节点正则放到各自独立的子组，避免混用两种候选来源。
+Anthropic节点 = select, policy-regex-filter=^(?!.*(?:官网|订阅|流量|到期|剩余|miniTailscale)).+$
+AI节点 = select, policy-regex-filter=^(?!.*(?:官网|订阅|流量|到期|剩余|miniTailscale)).+$
+Google节点 = select, policy-regex-filter=^(?!.*(?:官网|订阅|流量|到期|剩余|miniTailscale)).+$
+GitHub节点 = select, policy-regex-filter=^(?!.*(?:官网|订阅|流量|到期|剩余|miniTailscale)).+$
+Microsoft节点 = select, policy-regex-filter=^(?!.*(?:官网|订阅|流量|到期|剩余|miniTailscale)).+$
+Apple节点 = select, policy-regex-filter=^(?!.*(?:官网|订阅|流量|到期|剩余|miniTailscale)).+$
+Telegram节点 = select, policy-regex-filter=^(?!.*(?:官网|订阅|流量|到期|剩余|miniTailscale)).+$
+Spotify节点 = select, policy-regex-filter=^(?!.*(?:官网|订阅|流量|到期|剩余|miniTailscale)).+$
+Anthropic = select, Anthropic节点, 链式落地, policy-select-name=Anthropic节点
+AI = select, AI节点, 链式落地, policy-select-name=AI节点
+Google = select, Google节点, 链式落地, policy-select-name=Google节点
+GitHub = select, GitHub节点, 链式落地, policy-select-name=GitHub节点
+Microsoft = select, Microsoft节点, 链式落地, 直连, policy-select-name=Microsoft节点
+Apple = select, Apple节点, 链式落地, 直连, policy-select-name=Apple节点
+Telegram = select, Telegram节点, 链式落地, policy-select-name=Telegram节点
+Spotify = select, Spotify节点, 链式落地, 直连, policy-select-name=Spotify节点
 AdBlock = select, REJECT, DIRECT, policy-select-name=REJECT
 
 [Rule]

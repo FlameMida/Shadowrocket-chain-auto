@@ -124,8 +124,11 @@ def validate_config(config, datasets):
     edges = {}
     for name, definition in groups.items():
         members = [v.strip() for v in definition.split(",")[1:] if "=" not in v]
-        if any(member not in known for member in members):
+        external = {"自建-美国-TCP"} if name == "链式落地" else set()
+        if any(member not in known | external for member in members):
             raise ValueError("未知组成员：" + name)
+        if members and "policy-regex-filter=" in definition:
+            raise ValueError("固定选项与节点正则应分开定义：" + name)
         edges[name] = [member for member in members if member in groups]
         default = re.search(r"policy-select-name=([^,]+)", definition)
         if default and default[1] not in members:
@@ -155,6 +158,14 @@ def validate_config(config, datasets):
         raise ValueError("出现用户要求移除的分组")
     if groups.get("默认代理") != "select, PROXY, 链式落地, policy-select-name=PROXY":
         raise ValueError("默认代理没有跟随首页")
+    if groups.get("链式落地") != "select, REJECT, 自建-美国-TCP, policy-select-name=REJECT":
+        raise ValueError("链式落地必须显式引用自建节点并默认拒绝")
+    for service in ("Anthropic", "AI", "Google", "GitHub", "Microsoft", "Apple", "Telegram", "Spotify"):
+        node_group = service + "节点"
+        if node_group not in edges or edges.get(service, [])[:2] != [node_group, "链式落地"]:
+            raise ValueError("服务缺少独立节点组或链式落地入口：" + service)
+        if "policy-regex-filter=" not in groups[node_group] or edges[node_group]:
+            raise ValueError("节点组必须只使用正则筛选：" + node_group)
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
