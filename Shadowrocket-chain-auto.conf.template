@@ -3,7 +3,7 @@
 # 设置 → 配置 → 自动后台更新：开启，建议 1 天；允许 iOS 后台 App 刷新。
 # 无 update-url；App 更新引用的规则集，保留本地分组。iOS 不保证准点执行。
 # 本地目录或尚未发布的 GitHub 地址不能作为远程规则源。
-# 默认代理跟随首页；服务组分别手动选择节点，均保留“链式落地”。
+# 默认代理跟随首页；服务组直接选择普通节点或“链式落地”，不增加节点子组。
 # 在 App 添加 SOCKS5 节点“自建-美国-TCP”，在该节点“代理通过”选择具体机场节点。
 # 链式中转组仅供选节点参考；配置文件不能替你绑定落地节点的代理通过。
 # 方向：手机 → 机场节点 → SOCKS5 落地 → 网站。链式落地默认 REJECT。
@@ -29,23 +29,15 @@ close-if-proxy-chain-missing = true
 链式落地 = select, REJECT, 自建-美国-TCP, policy-select-name=REJECT
 默认代理 = select, PROXY, 链式落地, policy-select-name=PROXY
 直连 = select, DIRECT
-# 外层只列固定选项，节点正则放到各自独立的子组，避免混用两种候选来源。
-Anthropic节点 = select, policy-regex-filter=^(?!.*(?:官网|订阅|流量|到期|剩余|miniTailscale)).+$
-AI节点 = select, policy-regex-filter=^(?!.*(?:官网|订阅|流量|到期|剩余|miniTailscale)).+$
-Google节点 = select, policy-regex-filter=^(?!.*(?:官网|订阅|流量|到期|剩余|miniTailscale)).+$
-GitHub节点 = select, policy-regex-filter=^(?!.*(?:官网|订阅|流量|到期|剩余|miniTailscale)).+$
-Microsoft节点 = select, policy-regex-filter=^(?!.*(?:官网|订阅|流量|到期|剩余|miniTailscale)).+$
-Apple节点 = select, policy-regex-filter=^(?!.*(?:官网|订阅|流量|到期|剩余|miniTailscale)).+$
-Telegram节点 = select, policy-regex-filter=^(?!.*(?:官网|订阅|流量|到期|剩余|miniTailscale)).+$
-Spotify节点 = select, policy-regex-filter=^(?!.*(?:官网|订阅|流量|到期|剩余|miniTailscale)).+$
-Anthropic = select, Anthropic节点, 链式落地, policy-select-name=Anthropic节点
-AI = select, AI节点, 链式落地, policy-select-name=AI节点
-Google = select, Google节点, 链式落地, policy-select-name=Google节点
-GitHub = select, GitHub节点, 链式落地, policy-select-name=GitHub节点
-Microsoft = select, Microsoft节点, 链式落地, 直连, policy-select-name=Microsoft节点
-Apple = select, Apple节点, 链式落地, 直连, policy-select-name=Apple节点
-Telegram = select, Telegram节点, 链式落地, policy-select-name=Telegram节点
-Spotify = select, Spotify节点, 链式落地, 直连, policy-select-name=Spotify节点
+# use=true 组合固定选项与动态节点；正则显式保留链式落地和直连名称。
+Anthropic = select, 链式落地, use=true, policy-regex-filter=^(?:链式落地|直连|(?!(?:.*(?:官网|订阅|流量|到期|剩余|miniTailscale))).+)$, select=1
+AI = select, 链式落地, use=true, policy-regex-filter=^(?:链式落地|直连|(?!(?:.*(?:官网|订阅|流量|到期|剩余|miniTailscale))).+)$, select=1
+Google = select, 链式落地, use=true, policy-regex-filter=^(?:链式落地|直连|(?!(?:.*(?:官网|订阅|流量|到期|剩余|miniTailscale))).+)$, select=1
+GitHub = select, 链式落地, use=true, policy-regex-filter=^(?:链式落地|直连|(?!(?:.*(?:官网|订阅|流量|到期|剩余|miniTailscale))).+)$, select=1
+Microsoft = select, 链式落地, 直连, use=true, policy-regex-filter=^(?:链式落地|直连|(?!(?:.*(?:官网|订阅|流量|到期|剩余|miniTailscale))).+)$, select=2
+Apple = select, 链式落地, 直连, use=true, policy-regex-filter=^(?:链式落地|直连|(?!(?:.*(?:官网|订阅|流量|到期|剩余|miniTailscale))).+)$, select=2
+Telegram = select, 链式落地, use=true, policy-regex-filter=^(?:链式落地|直连|(?!(?:.*(?:官网|订阅|流量|到期|剩余|miniTailscale))).+)$, select=1
+Spotify = select, 链式落地, 直连, use=true, policy-regex-filter=^(?:链式落地|直连|(?!(?:.*(?:官网|订阅|流量|到期|剩余|miniTailscale))).+)$, select=2
 AdBlock = select, REJECT, DIRECT, policy-select-name=REJECT
 
 [Rule]

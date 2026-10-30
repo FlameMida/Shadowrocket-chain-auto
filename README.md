@@ -36,7 +36,7 @@ https://raw.githubusercontent.com/FlameMida/Shadowrocket-chain-auto/main/Shadowr
 
 ## 现有设置
 
-默认代理跟随首页当前节点；八个服务组各有独立的“服务名节点”子组，外层可选择该节点组或链式落地。手动选普通节点时，先在对应的“服务名节点”子组选择实际节点，再让外层使用这个子组；使用链式出口时，外层直接选链式落地。固定选项与正则节点筛选分开定义，避免两种候选来源混用。Microsoft、Apple、Spotify 保留直连选项。移除 FCM、自动测速选节点和负载均衡。21 条原版静态域名规则保留，五条 GitHub 域名按用户要求走 GitHub 组。
+默认代理跟随首页当前节点；八个服务组按 Clash 的选择方式，在同一组内直接选择普通节点或“链式落地”，各服务独立记录选择，不增加“服务名节点”子组。Microsoft、Apple、Spotify 保留直连选项。分组采用 `use=true` 组合固定选项与正则节点列表，筛选表达式保留链式落地和直连名称。该写法参考 [Repcz 的 Shadowrocket 配置](https://github.com/Repcz/Tool/blob/X/Shadowrocket/Shadowrocket.conf)，尚需 App 实机确认。移除 FCM、自动测速选节点和负载均衡。21 条原版静态域名规则保留，五条 GitHub 域名按用户要求走 GitHub 组。
 
 修复分组后需要从原地址重新导入配置；后台更新只刷新规则集，不会替换本地分组。请先在首页添加备注严格为 `自建-美国-TCP` 的 SOCKS5 节点，链式落地组才能引用该节点。链式落地初始选中 REJECT，需要手动改为实际落地节点。
 

@@ -127,8 +127,8 @@ def validate_config(config, datasets):
         external = {"自建-美国-TCP"} if name == "链式落地" else set()
         if any(member not in known | external for member in members):
             raise ValueError("未知组成员：" + name)
-        if members and "policy-regex-filter=" in definition:
-            raise ValueError("固定选项与节点正则应分开定义：" + name)
+        if members and "policy-regex-filter=" in definition and "use=true" not in definition.split(", "):
+            raise ValueError("组合固定选项与节点筛选时缺少 use=true：" + name)
         edges[name] = [member for member in members if member in groups]
         default = re.search(r"policy-select-name=([^,]+)", definition)
         if default and default[1] not in members:
@@ -161,11 +161,21 @@ def validate_config(config, datasets):
     if groups.get("链式落地") != "select, REJECT, 自建-美国-TCP, policy-select-name=REJECT":
         raise ValueError("链式落地必须显式引用自建节点并默认拒绝")
     for service in ("Anthropic", "AI", "Google", "GitHub", "Microsoft", "Apple", "Telegram", "Spotify"):
-        node_group = service + "节点"
-        if node_group not in edges or edges.get(service, [])[:2] != [node_group, "链式落地"]:
-            raise ValueError("服务缺少独立节点组或链式落地入口：" + service)
-        if "policy-regex-filter=" not in groups[node_group] or edges[node_group]:
-            raise ValueError("节点组必须只使用正则筛选：" + node_group)
+        definition = groups.get(service, "")
+        direct = service in ("Microsoft", "Apple", "Spotify")
+        expected = ["链式落地", "直连"] if direct else ["链式落地"]
+        if service + "节点" in groups or edges.get(service) != expected:
+            raise ValueError("服务必须直接提供链式落地入口，不增加节点子组：" + service)
+        regex = re.search(r"policy-regex-filter=(.*?)(?:, |$)", definition)
+        if not regex or "use=true" not in definition.split(", "):
+            raise ValueError("服务缺少直接节点筛选：" + service)
+        pattern = re.compile(regex[1])
+        if any(not pattern.fullmatch(member) for member in expected + ["香港 01", "自建-美国-TCP"]):
+            raise ValueError("服务筛选遗漏固定选项或实际节点：" + service)
+        if any(pattern.fullmatch(member) for member in ("剩余流量 100GB", "订阅到期", "miniTailscale")):
+            raise ValueError("服务筛选包含无效节点：" + service)
+        if f"select={len(expected)}" not in definition.split(", "):
+            raise ValueError("服务应初始选择普通节点：" + service)
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
