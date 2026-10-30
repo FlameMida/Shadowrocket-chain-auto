@@ -19,7 +19,7 @@ https://raw.githubusercontent.com/FlameMida/Shadowrocket-chain-auto/main/Shadowr
 - `rules/*.list`：转换后的 Shadowrocket RULE-SET 文本。
 - `manifest.json`：逐个记录上游 URL 和规则数量。
 - `last-success.txt`：生成时间（UTC）；工作流仅在规则或配置发生变化时提交，因此远端此时间代表最近一次产物变化，不代表最近一次定时检查。
-- `.github/workflows/update-rules.yml`：每天 UTC 03:23 更新，也可手动触发。
+- `.github/workflows/update-rules.yml`：每小时第 23 分钟拉取并转换上游规则，仅在产物变化时提交，也可手动触发。GitHub 调度可能延迟；手机端仍按 App 设置和 iOS 后台调度刷新，不保证每小时同步。
 
 ## 来源与转换
 
