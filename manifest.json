@@ -42,19 +42,19 @@
     },
     "ads": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/category-ads.list",
-      "count": 1538
+      "count": 1588
     },
     "geolocation-!cn": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/geolocation-!cn.list",
-      "count": 33853
+      "count": 35144
     },
     "gfw": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/gfw.list",
-      "count": 4429
+      "count": 19797
     },
     "cn": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/cn.list",
-      "count": 107383
+      "count": 107382
     },
     "private_ip": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geoip/private.list",
@@ -62,7 +62,7 @@
     },
     "cn_ip": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geoip/cn.list",
-      "count": 9636
+      "count": 9637
     },
     "google_ip": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geoip/google.list",
