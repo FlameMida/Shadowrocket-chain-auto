@@ -1489,6 +1489,7 @@ DOMAIN-SUFFIX,18comic.art
 DOMAIN-SUFFIX,18comic.cc
 DOMAIN-SUFFIX,18comic.company
 DOMAIN-SUFFIX,18comic.fun
+DOMAIN-SUFFIX,18comic.ink
 DOMAIN-SUFFIX,18comic.life
 DOMAIN-SUFFIX,18comic.live
 DOMAIN-SUFFIX,18comic.me
@@ -9016,6 +9017,7 @@ DOMAIN-SUFFIX,bingmh.com
 DOMAIN-SUFFIX,bingoporno.com
 DOMAIN-SUFFIX,bingparachute.com
 DOMAIN-SUFFIX,bingsandbox.com
+DOMAIN-SUFFIX,bingstatic.com
 DOMAIN-SUFFIX,bingvisualsearch.com
 DOMAIN-SUFFIX,bingworld.com
 DOMAIN-SUFFIX,bingx.com
@@ -9674,6 +9676,7 @@ DOMAIN-SUFFIX,bsappapi.cc
 DOMAIN-SUFFIX,bsappapi.com
 DOMAIN-SUFFIX,bscdnweb.com
 DOMAIN-SUFFIX,bsf4.com
+DOMAIN-SUFFIX,bsky.chat
 DOMAIN-SUFFIX,bsky.network
 DOMAIN-SUFFIX,bsky.social
 DOMAIN-SUFFIX,bstatic.com
@@ -15639,6 +15642,7 @@ DOMAIN-SUFFIX,githubapp.com
 DOMAIN-SUFFIX,githubassets.com
 DOMAIN-SUFFIX,githubcopilot.com
 DOMAIN-SUFFIX,githubhackathon.com
+DOMAIN-SUFFIX,githubhelp.com
 DOMAIN-SUFFIX,githubnext.com
 DOMAIN-SUFFIX,githubstatus.com
 DOMAIN-SUFFIX,githubsupport.com
@@ -21891,6 +21895,7 @@ DOMAIN-SUFFIX,msftauthimages.net
 DOMAIN-SUFFIX,msftconnecttest.com
 DOMAIN-SUFFIX,msftncsi.com
 DOMAIN-SUFFIX,msftnet.org
+DOMAIN-SUFFIX,msftstatic.com
 DOMAIN-SUFFIX,msgamesresearch.com
 DOMAIN-SUFFIX,msgamestudios.com
 DOMAIN-SUFFIX,msguancha.com
@@ -28513,7 +28518,10 @@ DOMAIN-SUFFIX,tiktokd.org
 DOMAIN-SUFFIX,tiktokeu-cdn.com
 DOMAIN-SUFFIX,tiktokglobalshopv.com
 DOMAIN-SUFFIX,tiktokrow-cdn.com
+DOMAIN-SUFFIX,tiktokshop.com
+DOMAIN-SUFFIX,tiktokstaticb.com
 DOMAIN-SUFFIX,tiktokv.com
+DOMAIN-SUFFIX,tiktokvapp.com
 DOMAIN-SUFFIX,tilda.cc
 DOMAIN-SUFFIX,tildaapi.com
 DOMAIN-SUFFIX,tildacdn.com
