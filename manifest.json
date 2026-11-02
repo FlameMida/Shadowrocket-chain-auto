@@ -46,7 +46,7 @@
     },
     "geolocation-!cn": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/geolocation-!cn.list",
-      "count": 35144
+      "count": 35148
     },
     "gfw": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/gfw.list",
