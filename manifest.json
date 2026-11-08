@@ -18,15 +18,15 @@
     },
     "ai": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/category-ai-!cn.list",
-      "count": 213
+      "count": 217
     },
     "github": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/github.list",
-      "count": 65
+      "count": 66
     },
     "microsoft": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/microsoft.list",
-      "count": 751
+      "count": 752
     },
     "apple": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/apple.list",
@@ -46,7 +46,7 @@
     },
     "geolocation-!cn": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/geolocation-!cn.list",
-      "count": 35154
+      "count": 35155
     },
     "gfw": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/gfw.list",
