@@ -6,7 +6,7 @@
     },
     "geolocation-cn": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/geolocation-cn.list",
-      "count": 5469
+      "count": 5470
     },
     "epicgames": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/epicgames.list",
