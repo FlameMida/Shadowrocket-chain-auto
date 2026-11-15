@@ -54,7 +54,7 @@
     },
     "cn": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/cn.list",
-      "count": 107479
+      "count": 107455
     },
     "private_ip": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geoip/private.list",
@@ -62,15 +62,15 @@
     },
     "cn_ip": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geoip/cn.list",
-      "count": 9658
+      "count": 9671
     },
     "google_ip": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geoip/google.list",
-      "count": 986
+      "count": 998
     },
     "microsoft_ip": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geoip/microsoft.list",
-      "count": 1116
+      "count": 1121
     },
     "apple_ip": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geoip/apple.list",
