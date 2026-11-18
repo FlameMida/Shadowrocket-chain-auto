@@ -18,7 +18,7 @@
     },
     "ai": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/category-ai-!cn.list",
-      "count": 217
+      "count": 218
     },
     "github": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/github.list",
@@ -62,7 +62,7 @@
     },
     "cn_ip": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geoip/cn.list",
-      "count": 9667
+      "count": 9672
     },
     "google_ip": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geoip/google.list",
