@@ -6,7 +6,7 @@
     },
     "geolocation-cn": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/geolocation-cn.list",
-      "count": 5472
+      "count": 5484
     },
     "epicgames": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/epicgames.list",
@@ -42,7 +42,7 @@
     },
     "ads": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/category-ads.list",
-      "count": 1469
+      "count": 1470
     },
     "geolocation-!cn": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/geolocation-!cn.list",
@@ -62,7 +62,7 @@
     },
     "cn_ip": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geoip/cn.list",
-      "count": 9672
+      "count": 9676
     },
     "google_ip": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geoip/google.list",
