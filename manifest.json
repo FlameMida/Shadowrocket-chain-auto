@@ -50,7 +50,7 @@
     },
     "gfw": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/gfw.list",
-      "count": 19797
+      "count": 19799
     },
     "cn": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/cn.list",
@@ -62,7 +62,7 @@
     },
     "cn_ip": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geoip/cn.list",
-      "count": 9676
+      "count": 9693
     },
     "google_ip": {
       "url": "https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geoip/google.list",
