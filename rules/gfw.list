@@ -1,6 +1,6 @@
 # 原始来源：https://raw.githubusercontent.com/appshubcc/bett-rules/meta/geo/geosite/gfw.list
-DOMAIN-SUFFIX,google.lt
-DOMAIN-SUFFIX,bookmyshow.com
+DOMAIN-SUFFIX,google.lu
+DOMAIN-SUFFIX,j7us8.com
 DOMAIN-SUFFIX,0002kh.com
 DOMAIN-SUFFIX,00038b.com
 DOMAIN-SUFFIX,0004.me
@@ -2310,7 +2310,7 @@ DOMAIN-SUFFIX,5546.com
 DOMAIN-SUFFIX,5549.me
 DOMAIN-SUFFIX,555008.com
 DOMAIN-SUFFIX,5552m.com
-DOMAIN-SUFFIX,000094.net
+DOMAIN-SUFFIX,555365.com
 DOMAIN-SUFFIX,5555.cc
 DOMAIN-SUFFIX,5558008.com
 DOMAIN-SUFFIX,55588a.com
@@ -4586,7 +4586,7 @@ DOMAIN-SUFFIX,99a29.com
 DOMAIN-SUFFIX,99a30.com
 DOMAIN-SUFFIX,99a32.com
 DOMAIN-SUFFIX,99a34.com
-DOMAIN-SUFFIX,99a35.com
+DOMAIN-SUFFIX,000094.net
 DOMAIN-SUFFIX,99a80.com
 DOMAIN-SUFFIX,99aaww.com
 DOMAIN-SUFFIX,99aazz.com
@@ -6506,7 +6506,7 @@ DOMAIN-SUFFIX,zhongzilou.com
 DOMAIN-SUFFIX,bookcheng.com
 DOMAIN-SUFFIX,bookdepository.com
 DOMAIN-SUFFIX,bookepub.com
-DOMAIN-SUFFIX,google.lu
+DOMAIN-SUFFIX,bookmyshow.com
 DOMAIN-SUFFIX,zhongzidi.com
 DOMAIN-SUFFIX,zhongzi8.cc
 DOMAIN-SUFFIX,booktxt.net
@@ -7883,6 +7883,7 @@ DOMAIN-SUFFIX,dandanzan.com
 DOMAIN-SUFFIX,dangels.com
 DOMAIN-SUFFIX,danke4china.net
 DOMAIN-SUFFIX,danm8.com
+DOMAIN-SUFFIX,danmakus.com
 DOMAIN-SUFFIX,danran.net
 DOMAIN-SUFFIX,dans.cc
 DOMAIN-SUFFIX,daocaorenshuwu.com
@@ -9909,10 +9910,10 @@ DOMAIN-SUFFIX,google.kz
 DOMAIN-SUFFIX,google.la
 DOMAIN-SUFFIX,google.li
 DOMAIN-SUFFIX,google.lk
-DOMAIN-SUFFIX,555365.com
+DOMAIN-SUFFIX,google.lt
+DOMAIN-SUFFIX,99a35.com
 DOMAIN-SUFFIX,0002838.com
-DOMAIN-SUFFIX,longportapp.cn
-DOMAIN-SUFFIX,google.md
+DOMAIN-SUFFIX,googlemashups.com
 DOMAIN-SUFFIX,google.me
 DOMAIN-SUFFIX,google.mg
 DOMAIN-SUFFIX,google.mk
@@ -9978,7 +9979,7 @@ DOMAIN-SUFFIX,googlehosted.com
 DOMAIN-SUFFIX,googleideas.com
 DOMAIN-SUFFIX,googleinsidesearch.com
 DOMAIN-SUFFIX,googlemail.com
-DOMAIN-SUFFIX,googlemashups.com
+DOMAIN-SUFFIX,google.md
 DOMAIN-SUFFIX,googlepagecreator.com
 DOMAIN-SUFFIX,googleplay.com
 DOMAIN-SUFFIX,googleplus.com
@@ -11224,7 +11225,7 @@ DOMAIN-SUFFIX,j7378.com
 DOMAIN-SUFFIX,j74ox4dayx5rk0284.com
 DOMAIN-SUFFIX,j777cc.com
 DOMAIN-SUFFIX,j7nsk.xyz
-DOMAIN-SUFFIX,j7us8.com
+DOMAIN-SUFFIX,google.lv
 DOMAIN-SUFFIX,j88889.com
 DOMAIN-SUFFIX,j888k.com
 DOMAIN-SUFFIX,j92020.com
@@ -12455,7 +12456,7 @@ DOMAIN-SUFFIX,longmao520.com
 DOMAIN-SUFFIX,longmao97.com
 DOMAIN-SUFFIX,longmaoav.com
 DOMAIN-SUFFIX,longmusic.com
-DOMAIN-SUFFIX,google.lv
+DOMAIN-SUFFIX,longportapp.cn
 DOMAIN-SUFFIX,longportapp.com
 DOMAIN-SUFFIX,longtermly.net
 DOMAIN-SUFFIX,longtoes.com
@@ -15642,6 +15643,7 @@ DOMAIN-SUFFIX,souutu.com
 DOMAIN-SUFFIX,y7c9.com
 DOMAIN-SUFFIX,soylentnews.org
 DOMAIN-SUFFIX,spa177des.vip
+DOMAIN-SUFFIX,spacedesk.net
 DOMAIN-SUFFIX,spaceforce.mil
 DOMAIN-SUFFIX,spacex.com
 DOMAIN-SUFFIX,spankbang.com
